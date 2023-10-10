@@ -1,135 +1,201 @@
-/*
-  Theme colors
-    All selectors with colors that would need
-    to be changed for theme changes
-*/
-
-/*
-  COLORS
-
-  Sky
-    rgb(52, 152, 219)
-
-  Dark Blue
-    rgb(44, 62, 80)
-
-  Grey
-    rgb(127, 140, 141)
-
-  Cloud
-    rgb(236, 240, 241)
-*/
-
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-  }
-}
-
-
-
-.background--skyBlue {
-  background-color: rgb(52, 152, 219);
-}
-
-.color--skyBlue {
-  color: rgb(52, 152, 219);
-}
-
-.color--cloud {
-  color: rgb(236, 240, 241);
-}
-
-.color--grey {
-  color: rgb(127, 140, 141);
-}
-
-.color--darkgrey {
-  color: rgb(44, 62, 80);
-}
-
-.section__example {
-  background-color: rgb(44, 62, 80);
-}
-
-/*
-  General Styles
-    These are styles to be inherited
-    through parent containers
-
-*/
-html {
-  font-size: 80.5%;
+html{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: 'Cardo', serif;
-  margin: 0;
+  background: lightblue;
+ /* font-family: 'Cardo', serif; */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: .1rem;
-}
-
-.left_aside{
-  width: 30%;
-  float: left;
-  padding: 30px;
-  background-color: rgb(52, 152, 219);
-  flex: 30%;
-}
-
-
-.right_aside {
-  padding-top: 25px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-left: 50px;
-  font-style: italic;
-  background-color: rgb(217, 224, 224);
-  flex: 70%;
-}
-
-
-.overflow--auto {
-  overflow: auto;
-}
-
-.rcorners {
-  border-style: outset;
-  padding: 5px;  
-}
-
-.rcorners2 {
-  border-radius: 25px;
-  border: 5px solid #470ba8;
-  padding: 2px;  
-  margin: 5px;
-  width: 50px;
-}
-
-
-/*
-  Helpers
-
-.margin--none {
-  margin: 0;
-}
-
-
-
-*/
-
-/*
-  Sections
-
-
-.section {
-  font-size: 4.2rem;
-  min-height: 70vh;
+.container{
   position: relative;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  background: #fff;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgb(0, 0, 0, 0.1);
 }
-*/
+
+.container .left_Side {
+  position: relative;
+  background: #003147;
+  padding: 40px;
+}
+
+.profileText{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+.profileText .imgBx{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+
+.profileText .imgBx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.profileText h2 {
+color: #fff;
+font-size: 1.5em;
+margin-top: 20px;
+text-transform: uppercase;
+text-align: center;
+font-weight: 600;
+line-height: 1.4em;
+}
+
+.profileText h2 span{
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.title{
+color: #fff;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
+
+.contentInfo ul{
+ position: relative;
+}
+
+.contentInfo ul li{
+ position: relative;
+ list-style: none;
+ margin: 10px 0;
+ cursor: pointer;
+}
+
+.contentInfo ul li .icon{
+display: inline-block;
+width: 30px;
+font-size: 18px;
+color: #03a9f4;
+ }
+
+ .contentInfo ul li span{
+color: #fff;
+font-weight: 200;
+   }
+
+
+
+ .contentInfo.skill li{
+    margin-bottom: 2px;
+
+}
+
+.contentInfo.skill h4{
+  color: #c9c9ca;
+  font-weight: 500;
+}
+
+.contentInfo.skill h6{
+  margin: 0;
+  padding: 0;
+  color: #686869;
+  font-weight: 500;
+}
+
+.contentInfo.skill h4:nth-child(2){
+  color: #fff;
+  font-weight: 500;
+}
+
+.contentInfo.language .percent{
+position: relative;
+}
+
+
+
+.container .right_Side  {
+  position: relative;
+  background: #fff;
+  padding: 40px;
+}
+
+
+.about{
+margin-bottom: 50px;
+}
+
+.about:last-child{
+  margin-bottom: 0;
+}
+
+.title2{
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+p{
+  color: #333;
+}
+
+.about .box{
+display: flex;
+flex-direction: row;
+margin: 20px 0;
+}
+
+.about .box .year_company{
+min-width: 150px;
+}
+
+.about .box .year_company h5{
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+  }
+
+  .title2 .text1{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+    }
+
+
+    @media (max-with: 1000px){
+      .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+      }
+      
+    }
+
+    @media (max-with: 600px){
+      .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+      }
+      
+    }
