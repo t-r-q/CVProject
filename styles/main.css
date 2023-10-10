@@ -1,0 +1,135 @@
+/*
+  Theme colors
+    All selectors with colors that would need
+    to be changed for theme changes
+*/
+
+/*
+  COLORS
+
+  Sky
+    rgb(52, 152, 219)
+
+  Dark Blue
+    rgb(44, 62, 80)
+
+  Grey
+    rgb(127, 140, 141)
+
+  Cloud
+    rgb(236, 240, 241)
+*/
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+
+
+.background--skyBlue {
+  background-color: rgb(52, 152, 219);
+}
+
+.color--skyBlue {
+  color: rgb(52, 152, 219);
+}
+
+.color--cloud {
+  color: rgb(236, 240, 241);
+}
+
+.color--grey {
+  color: rgb(127, 140, 141);
+}
+
+.color--darkgrey {
+  color: rgb(44, 62, 80);
+}
+
+.section__example {
+  background-color: rgb(44, 62, 80);
+}
+
+/*
+  General Styles
+    These are styles to be inherited
+    through parent containers
+
+*/
+html {
+  font-size: 80.5%;
+}
+
+body {
+  font-family: 'Cardo', serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .1rem;
+}
+
+.left_aside{
+  width: 30%;
+  float: left;
+  padding: 30px;
+  background-color: rgb(52, 152, 219);
+  flex: 30%;
+}
+
+
+.right_aside {
+  padding-top: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: 50px;
+  font-style: italic;
+  background-color: rgb(217, 224, 224);
+  flex: 70%;
+}
+
+
+.overflow--auto {
+  overflow: auto;
+}
+
+.rcorners {
+  border-style: outset;
+  padding: 5px;  
+}
+
+.rcorners2 {
+  border-radius: 25px;
+  border: 5px solid #470ba8;
+  padding: 2px;  
+  margin: 5px;
+  width: 50px;
+}
+
+
+/*
+  Helpers
+
+.margin--none {
+  margin: 0;
+}
+
+
+
+*/
+
+/*
+  Sections
+
+
+.section {
+  font-size: 4.2rem;
+  min-height: 70vh;
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+*/
